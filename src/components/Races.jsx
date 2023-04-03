@@ -1,14 +1,27 @@
 import React from "react";
+import { useState, useEffect } from "react";
+import { getAllRaces } from "../services/reqester";
+import { DateTime } from "../utils/dateTimeFormatter";
+
 import "../style/Races.css";
 
 const Races = () => {
+  const [raceInfo, setRaceInfo] = useState([]);
+  console.log(raceInfo);
+
+  useEffect(() => {
+    getAllRaces().then((result) => {
+      setRaceInfo(Object.values(result.MRData.RaceTable.Races));
+    });
+  }, []);
+
   return (
     <div className="races-container">
       <main className="main">
         <div className="main-content">
+          <h1>Season 2023</h1>
           <table>
             <thead>
-              <h1>Season 2023</h1>
               <tr>
                 <th>Round</th>
                 <th>Country</th>
@@ -19,14 +32,23 @@ const Races = () => {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td className="race-round">1</td>
-                <td className="country-flag">National flag</td>
-                <td className="grand-prix">Bahrain Grand Prix</td>
-                <td className="qualy-info">04.03.2023 17:00</td>
-                <td className="race-info">05.03.2023 17:00</td>
-                <td className="curcuit-name">Bahrain International Circuit</td>
-              </tr>
+              {raceInfo.map((race) => (
+                <tr key={race.round}>
+                  <td className="race-round">{race.round}</td>
+                  <td className="country-flag">{race.Circuit.Location.locality}, {race.Circuit.Location.country}</td>
+                  <td className="grand-prix">{race.raceName}</td>
+                  <td className="qualy-info">
+                    <DateTime
+                      date={race.Qualifying.date}
+                      time={race.Qualifying.time}
+                    />
+                  </td>
+                  <td className="race-info">
+                    <DateTime date={race.date} time={race.time} />
+                  </td>
+                  <td className="curcuit-name">{race.Circuit.circuitName}</td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
