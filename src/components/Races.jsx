@@ -8,7 +8,6 @@ import "../style/Races.css";
 const Races = () => {
   const [raceInfo, setRaceInfo] = useState([]);
   const [allSeasons, setAllSeasons] = useState([]);
-  console.log(allSeasons);
 
   useEffect(() => {
     getAllSeasons().then((res) => {
