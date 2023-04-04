@@ -1,16 +1,20 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { getAllRaces } from "../services/reqester";
+import { getCurrentSeason, getAllSeasons } from "../services/reqester";
 import { DateTime } from "../utils/dateTimeFormatter";
 
 import "../style/Races.css";
 
 const Races = () => {
   const [raceInfo, setRaceInfo] = useState([]);
-  console.log(raceInfo);
+  const [allSeasons, setAllSeasons] = useState([]);
+  console.log(allSeasons);
 
   useEffect(() => {
-    getAllRaces().then((result) => {
+    getAllSeasons().then((res) => {
+      setAllSeasons(res);
+    });
+    getCurrentSeason().then((result) => {
       setRaceInfo(Object.values(result.MRData.RaceTable.Races));
     });
   }, []);
@@ -35,7 +39,10 @@ const Races = () => {
               {raceInfo.map((race) => (
                 <tr key={race.round}>
                   <td className="race-round">{race.round}</td>
-                  <td className="country-flag">{race.Circuit.Location.locality}, {race.Circuit.Location.country}</td>
+                  <td className="country-flag">
+                    {race.Circuit.Location.locality},{" "}
+                    {race.Circuit.Location.country}
+                  </td>
                   <td className="grand-prix">{race.raceName}</td>
                   <td className="qualy-info">
                     <DateTime
