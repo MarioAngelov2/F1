@@ -12,7 +12,7 @@
   width: 60%;
   border-spacing: 0;
   margin-bottom: 7rem;
-  margin-top: 3rem;
+  margin-top: 1.5rem;
 }
 
 .driverStandings-container thead {
@@ -38,4 +38,10 @@
 
 .driverStandings-container tbody tr:nth-child(odd) {
   background-color: rgb(242, 242, 242);
+}
+
+.driverStandings-container .main-content .season-progress {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
 }
