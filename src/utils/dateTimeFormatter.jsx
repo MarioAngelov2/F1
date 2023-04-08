@@ -1,13 +1,8 @@
-export const DateTime = ({ date, time }) => {
-  const formattedDate = new Date(date).toLocaleDateString();
-  const formattedTime = new Date(`${date}${time}`).toLocaleTimeString([], {
-    hour: "2-digit",
-    minute: "2-digit",
-  });
+import moment from "moment";
 
-  return (
-    <>
-      {formattedDate} {formattedTime}
-    </>
-  );
+export const DateTime = ({ date, time }) => {
+  const dateTimeString = `${date} ${time}`;
+  const formattedDateTime = moment(dateTimeString).format("MMM DD, YYYY h:mm A");
+
+  return <>{formattedDateTime}</>;
 };
