@@ -1,20 +1,17 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { getCurrentSeason, getAllSeasons } from "../services/reqester";
-import { DateTime } from "../utils/dateTimeFormatter";
+import { getCurrentSeason, getDriversStandings } from "../services/reqester";
+import RacesData from "./RacesData";
 
 import "../style/Races.css";
 
 const Races = () => {
   const [raceInfo, setRaceInfo] = useState([]);
-  const [allSeasons, setAllSeasons] = useState([]);
 
+  // fetch data about current season
   useEffect(() => {
-    getAllSeasons().then((res) => {
-      setAllSeasons(res);
-    });
-    getCurrentSeason().then((result) => {
-      setRaceInfo(Object.values(result.MRData.RaceTable.Races));
+    getDriversStandings().then((result) => {
+      setRaceInfo(Object.values(result.MRData.StandingsTable.StandingsLists));
     });
   }, []);
 
@@ -22,7 +19,11 @@ const Races = () => {
     <div className="races-container">
       <main className="main">
         <div className="main-content">
-          <h1>Season 2023</h1>
+          {raceInfo.map((data) => (
+            <React.Fragment key={data.season}>
+              <h3>Season {data.season}</h3>
+            </React.Fragment>
+          ))}
           <table>
             <thead>
               <tr>
@@ -35,26 +36,7 @@ const Races = () => {
               </tr>
             </thead>
             <tbody>
-              {raceInfo.map((race) => (
-                <tr key={race.round}>
-                  <td className="race-round">{race.round}</td>
-                  <td className="country-flag">
-                    {race.Circuit.Location.locality},{" "}
-                    {race.Circuit.Location.country}
-                  </td>
-                  <td className="grand-prix">{race.raceName}</td>
-                  <td className="qualy-info">
-                    <DateTime
-                      date={race.Qualifying.date}
-                      time={race.Qualifying.time}
-                    />
-                  </td>
-                  <td className="race-info">
-                    <DateTime date={race.date} time={race.time} />
-                  </td>
-                  <td className="curcuit-name">{race.Circuit.circuitName}</td>
-                </tr>
-              ))}
+              <RacesData />
             </tbody>
           </table>
         </div>
