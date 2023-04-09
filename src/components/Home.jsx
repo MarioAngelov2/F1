@@ -48,37 +48,42 @@ const Home = () => {
   }
 
   return (
-    <div className="home-container">
-      <div className="content-wrapper">
-        {sliderData.map((slide, index) => (
-          <div className="content-slide" key={index}>
-            {index === current && (
-              <>
-                <motion.div className="content-slider">
-                  <motion.img
-                    initial={{ opacity: 0 }}
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
+      <div className="home-container">
+        <div className="content-wrapper">
+          {sliderData.map((slide, index) => (
+            <div className="content-slide" key={index}>
+              {index === current && (
+                <>
+                  <motion.div
+                    initial={{ opacity: 0.7 }}
                     animate={{ opacity: 1 }}
-                    transition={{ duration: 0.8 }}
-                    className="img-slide"
-                    src={slide.image}
-                  />
-                </motion.div>
-                <div className="content-info">
-                  <h2>Hello</h2>
-                </div>
-              </>
-            )}
+                    transition={{ duration: 3 }}
+                    className="content-slider"
+                  >
+                    <div className="content-info">
+                      <h2>{slide.title}</h2>
+                    </div>
+                    <motion.img className="img-slide" src={slide.image} />
+                  </motion.div>
+                </>
+              )}
+            </div>
+          ))}
+          <div className="arrow-buttons">
+            <NavigateBeforeOutlinedIcon
+              onClick={prevSlide}
+              className="arrow-button"
+            />
+            <NavigateNextIcon onClick={nextSlide} className="arrow-button" />
           </div>
-        ))}
-        <div className="arrow-buttons">
-          <NavigateBeforeOutlinedIcon
-            onClick={prevSlide}
-            className="arrow-button"
-          />
-          <NavigateNextIcon onClick={nextSlide} className="arrow-button" />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
