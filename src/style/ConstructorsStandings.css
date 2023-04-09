@@ -1,0 +1,40 @@
+.constructorStandings-container {
+  display: flex;
+  width: 100%;
+  height: 90vh;
+}
+
+.constructorStandings-container table {
+  margin: auto;
+  border-collapse: separate;
+  border-spacing: 0px;
+  table-layout: fixed;
+  width: 60%; 
+  margin-bottom: 3rem;
+  margin-top: 10rem;
+}
+
+.constructorStandings-container thead {
+  text-align: center;
+}
+
+.constructorStandings-container tbody {
+  text-align: center;
+}
+
+.constructorStandings-container th {
+  background-color: black;
+  color: white;
+  padding: 12px;
+}
+
+.constructorStandings-container td {
+  word-wrap: break-word;
+  max-width: 12.5rem;
+  padding: 20px;
+  font-size: 14px;
+}
+
+.constructorStandings-container tbody tr:nth-child(odd) {
+  background-color: rgb(242, 242, 242);
+}
