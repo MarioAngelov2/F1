@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "../style/Home.css";
 import { sliderData } from "../utils/SliderData";
 
@@ -10,13 +10,41 @@ const Home = () => {
   const length = sliderData.length;
   const timeOut = useRef(null);
 
+  // change the background with setTimeout
+  useEffect(() => {
+    const nextSlide = () => {
+      setCurrent((current) => (current === length - 1 ? 0 : current + 1));
+    };
+
+    timeOut.current = setTimeout(nextSlide, 7000);
+
+    return function () {
+      if (timeOut.current) {
+        clearTimeout(timeOut.current);
+      }
+    };
+  }, [current, length]);
+
   const nextSlide = () => {
+    if (timeOut.current) {
+      clearTimeout(timeOut.current);
+    }
+
     setCurrent(current === length - 1 ? 0 : current + 1);
   };
 
   const prevSlide = () => {
+    if (timeOut.current) {
+      clearTimeout(timeOut.current);
+    }
+
     setCurrent(current === 0 ? length - 1 : current - 1);
   };
+
+  // check if the array is empty
+  if (!Array.isArray(sliderData) || sliderData.length <= 0) {
+    return null;
+  }
 
   return (
     <div className="home-container">
