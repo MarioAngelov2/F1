@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import "../style/Home.css";
 import { sliderData } from "../utils/SliderData";
+import { motion } from "framer-motion";
 
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import NavigateBeforeOutlinedIcon from "@mui/icons-material/NavigateBeforeOutlined";
@@ -16,7 +17,7 @@ const Home = () => {
       setCurrent((current) => (current === length - 1 ? 0 : current + 1));
     };
 
-    timeOut.current = setTimeout(nextSlide, 7000);
+    timeOut.current = setTimeout(nextSlide, 5000);
 
     return function () {
       if (timeOut.current) {
@@ -53,9 +54,15 @@ const Home = () => {
           <div className="content-slide" key={index}>
             {index === current && (
               <>
-                <div className="content-slider">
-                  <img className="img-slide" src={slide.image} />
-                </div>
+                <motion.div className="content-slider">
+                  <motion.img
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.8 }}
+                    className="img-slide"
+                    src={slide.image}
+                  />
+                </motion.div>
                 <div className="content-info">
                   <h2>Hello</h2>
                 </div>
