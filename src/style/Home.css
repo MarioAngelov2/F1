@@ -43,7 +43,7 @@
   bottom: 0vh;
   left: 0;
   overflow: hidden;
-  opacity: 0.2;
+  opacity: 0.3;
   background: linear-gradient(
     0deg,
     rgba(0, 0, 0, 2) 0%,
@@ -66,9 +66,25 @@
   z-index: 10;
   display: flex;
   flex-direction: column;
-  max-width: 1600px;
-  width: calc(100% - 100px);
+  /* max-width: 1600px; */
+  width: calc(100% - 200px);
+  height: calc(100% - 500px);
   color: white;
+}
+
+.home-container
+  .content-wrapper
+  .content-slide
+  .content-slider
+  .content-info
+  h2 {
+    font-size: clamp(3rem, 2.5vw, 4rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: rgba(0, 0, 0, 0.444) 0.5px 0 20px;
+    text-align: left;
+    max-width: 40%;
+    word-wrap: break-word;
 }
 
 .home-container .arrow-buttons {
