@@ -6,33 +6,33 @@ import imageFive from "../assets/F1-image5.jpg";
 
 export const sliderData = [
   {
-    title: "F1 Passion",
+    title: "Chasing the Championship: F1 Driver Standings Update",
     path: "/home",
     image: imageOne,
-    alt: "img-car",
+    alt: "F1 Car Image",
   },
   {
-    title: "F1 Passion",
+    title: "On the Starting Grid: Upcoming F1 Race Schedule",
     path: "/home",
     image: imageTwo,
-    alt: "img-car",
+    alt: "F1 Car Image",
   },
   {
-    title: "F1 Passion",
+    title: "The Power Behind the Podium: Meet the Leading F1 Teams",
     path: "/home",
     image: imageThree,
-    alt: "img-car",
+    alt: "F1 Car Image",
   },
   {
-    title: "F1 Passion",
+    title: "Revolutionary Racing: F1's Impact on Motorsport History",
     path: "/home",
     image: imageFour,
-    alt: "img-car",
+    alt: "F1 Car Image",
   },
   {
-    title: "F1 Passion",
+    title: "Fueling the Passion: The Best F1 Moments of All Time",
     path: "/home",
     image: imageFive,
-    alt: "img-car",
+    alt: "F1 Car Image",
   },
 ];
