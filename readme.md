@@ -17,7 +17,9 @@ This project was built using `JavaScript` and `React`, and it retrieves Formula 
 
 Ergast provides a free-to-use, RESTful API for retrieving a wide variety of motorsport data, including Formula 1 racing results, driver and constructor standings, and more. In this project, I utilized the Ergast API to retrieve real-time data for driver standings, constructor standings, and the race schedule.
 
-In addition, this project also utilizes several third-party libraries to enhance its functionality and user experience. These libraries include:
+In addition, this project was built using the `Vite` build tool. Vite is a fast and efficient build tool for modern web development that provides lightning-fast development server startup time, instant hot module replacement, and optimized production builds. 
+
+This project also utilizes several third-party libraries to enhance its functionality and user experience. These libraries include:
 
 - Framer Motion
 - Material-UI 
