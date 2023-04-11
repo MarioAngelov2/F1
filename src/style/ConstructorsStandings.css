@@ -11,7 +11,7 @@
   table-layout: fixed;
   width: 60%; 
   margin-bottom: 3rem;
-  margin-top: 10rem;
+  margin-top: 1.5rem;
 }
 
 .constructorStandings-container thead {
@@ -37,4 +37,9 @@
 
 .constructorStandings-container tbody tr:nth-child(odd) {
   background-color: rgb(242, 242, 242);
+}
+
+.constructorStandings-container .constructor-progress {
+  text-align: center;
+  margin-top: 8rem;
 }
