@@ -1,4 +1,4 @@
-# F1
+# F1 <img src="/src/assets/F1-LOGO.png" alt="favicon" width="50" height="50"/>
 
 The project is still in development process.
 
