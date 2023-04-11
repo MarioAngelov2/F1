@@ -2,6 +2,8 @@ The project is still in development process.
 
 ## Overview
 
+Welcome to our Formula 1 live data app! This app provides real-time data for Formula 1 racing fans, including driver standings, constructor standings, and the race schedule. With our user-friendly interface and engaging animations, you can easily stay up-to-date on the latest racing information and track your favorite drivers and teams throughout the season. Whether you're a die-hard fan or a casual spectator, our app is the perfect tool for staying informed and enjoying the excitement of Formula 1 racing.
+
 The driver standings page displays the current rankings of all Formula 1 drivers based on their performance throughout the season. Users can view the name, team, points earned, and number of wins for each driver, and the standings are updated in real-time.
 
 The constructor standings page displays the current rankings of all Formula 1 teams based on their performance throughout the season. Users can view the team name, points earned, and number of wins for each team, and the standings are updated in real-time.
