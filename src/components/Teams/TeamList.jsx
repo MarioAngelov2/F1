@@ -44,28 +44,3 @@ const TeamList = () => {
 
 export default TeamList;
 
-// return (
-//   <div className="drivers-container">
-//     <div className="row">
-//       <div className="listing-wrapper">
-//         <div className="listing-item">
-//           <div className="listing-standing">
-//             <div className="rank">1</div>
-//             <div className="points">69</div>
-//           </div>
-//           <div className="listing-info">
-//             <div className="team-info">
-//               <span>Red Bull Racing</span>
-//             </div>
-//             <div className="team-logo">{/* image */}</div>
-//             <div className="listing-drivers">
-//               <div className="driver">Max Verstappen</div>
-//               <div className="driver">Sergio Perez</div>
-//             </div>
-//             <div className="team-car-image">{/* car image */}</div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   </div>
-// );
