@@ -1,0 +1,86 @@
+.drivers-container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.drivers-container .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 10rem;
+}
+
+.drivers-container .listing-container {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.drivers-container .row .listing-wrapper {
+  border-top: solid 2px #000;
+  border-right: solid 2px #000;
+  border-top-right-radius: 10px;
+  margin-top: 40px;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+.listing-container .listing-wrapper .listing-standing {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #949498;
+  margin-bottom: 10px;
+}
+
+.listing-container .listing-wrapper .listing-standing .rank {
+  font-size: 2.65rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+.listing-container .listing-wrapper .listing-standing .points {
+  text-align: right;
+}
+
+.listing-container .listing-wrapper .listing-standing .points .team-pts {
+  font-size: 26px;
+  line-height: 24px;
+}
+
+.listing-container .listing-wrapper .listing-info {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #949498;
+  margin-bottom: 10px;
+}
+
+.listing-container .listing-wrapper .listing-info .team-info {
+  display: flex;
+  align-items: center;
+}
+
+.listing-container .listing-wrapper .listing-info .team-logo img {
+  max-width: 50px;
+}
+
+.listing-container .listing-wrapper .listing-info .listing-drivers {
+  display: flex;
+  gap: 6rem;
+  margin-bottom: 10px;
+}
+.listing-container .listing-wrapper .listing-info .listing-drivers .driver {
+  border-right: solid 1px #949498;
+  border-bottom: solid 1px #949498;
+  border-bottom-right-radius: 10px;
+  padding: 0;
+  width: 100%;
+  max-width: 38%;
+  overflow: hidden;
+}
+
+.listing-container .listing-wrapper .listing-info .team-car-image img {
+  width: 80%;
+  background-position: center;
+}
