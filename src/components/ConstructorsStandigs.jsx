@@ -6,7 +6,6 @@ import "../style/ConstructorsStandings.css";
 
 const ConstructorsStandigs = () => {
   const [constructorData, setConstructorData] = useState([]);
-  console.log(constructorData.map(x => console.log(x.season)))
 
   useEffect(() => {
     getConstructorStandings().then((result) => {
