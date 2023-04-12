@@ -15,6 +15,7 @@ const Navbar = () => {
         <Link to="/races">Race Schedule</Link>
         <Link to="/driver-standings">Driver Standings</Link>
         <Link to="/constructor-standings">Constructor Standings</Link>
+        <Link to="/teams">Teams</Link>
       </div>
     </div>
   );

@@ -6,6 +6,7 @@ import Races from "./components/Races";
 import DriverStandings from "./components/DriverStandings";
 import Home from "./components/Home";
 import ConstructorsStandigs from "./components/ConstructorsStandigs";
+import TeamList from "./components/Teams/TeamList";
 
 import { AnimatePresence } from "framer-motion";
 
@@ -24,6 +25,7 @@ function App() {
             path="/constructor-standings"
             element={<ConstructorsStandigs />}
           />
+          <Route path="/teams" element={<TeamList />} />
         </Routes>
       </AnimatePresence>
       <Footer />
