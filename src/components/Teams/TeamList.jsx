@@ -16,6 +16,13 @@ const TeamList = () => {
         <div className="title">
           <h1>F1 TEAMS 2023</h1>
         </div>
+        <div className="micro-text">
+          <p>
+            Discover everything you need to know about this year's Formula 1
+            teams - drivers, podium finishes, points earned and championship
+            titles.
+          </p>
+        </div>
         <div className="row">
           <TeamListData />
         </div>
