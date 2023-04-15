@@ -41,7 +41,7 @@
   flex-wrap: wrap;
   margin-top: 10rem;
   margin-bottom: 10rem;
-  max-width: 50%;
+  max-width: 70%;
 }
 
 .drivers-container .listing-container {
@@ -64,7 +64,8 @@
   border-bottom: 1px solid #949498;
   margin-bottom: 10px;
   display: flex;
-  gap: 17rem;
+  justify-content: space-between;
+  margin-right: 10px;
 }
 
 .listing-container .listing-wrapper .listing-standing .rank {
@@ -84,7 +85,6 @@
 
 .listing-container .listing-wrapper .listing-info {
   padding-bottom: 10px;
- 
   margin-bottom: 10px;
 }
 
