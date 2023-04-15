@@ -32,6 +32,11 @@
   height: auto;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+
+.drivers-container .title {
+  margin-top: 8rem;
 }
 
 .drivers-container .row {
@@ -39,7 +44,7 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 10rem;
+  margin-top: 3rem;
   margin-bottom: 10rem;
   max-width: 70%;
 }
