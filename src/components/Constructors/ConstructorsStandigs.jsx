@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import ConstructorsStandigsData from "./ConstructorsStandigsData";
 import { getConstructorStandings } from "../../services/reqester";
 
+import { motion } from "framer-motion";
 import "../../style/ConstructorStandings.css";
 
 const ConstructorsStandigs = () => {
@@ -16,34 +17,41 @@ const ConstructorsStandigs = () => {
   }, []);
 
   return (
-    <div className="constructorStandings-container">
-      <main>
-        <div className="main-content">
-          <div className="constructor-progress">
-            {constructorData.map((constructor) => (
-              <>
-                <h2>Season {constructor.season}</h2>
-                <h3>Round {constructor.round}</h3>
-              </>
-            ))}
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      <div className="constructorStandings-container">
+        <main>
+          <div className="main-content">
+            <div className="constructor-progress">
+              {constructorData.map((constructor) => (
+                <>
+                  <h2>Season {constructor.season}</h2>
+                  <h3>Round {constructor.round}</h3>
+                </>
+              ))}
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Position</th>
+                  <th>Constructor</th>
+                  <th>Nationality</th>
+                  <th>Points</th>
+                  <th>Wins</th>
+                </tr>
+              </thead>
+              <tbody>
+                <ConstructorsStandigsData />
+              </tbody>
+            </table>
           </div>
-          <table>
-            <thead>
-              <tr>
-                <th>Position</th>
-                <th>Constructor</th>
-                <th>Nationality</th>
-                <th>Points</th>
-                <th>Wins</th>
-              </tr>
-            </thead>
-            <tbody>
-              <ConstructorsStandigsData />
-            </tbody>
-          </table>
-        </div>
-      </main>
-    </div>
+        </main>
+      </div>
+    </motion.div>
   );
 };
 
