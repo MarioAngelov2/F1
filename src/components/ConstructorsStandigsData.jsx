@@ -3,11 +3,12 @@ import { getConstructorStandings } from "../services/reqester";
 
 const ConstructorsStandigsData = () => {
   const [constructorInfo, setConstructorInfo] = useState([]);
-  // const data = constructorInfo.map(x => {
-  //   x.ConstructorStandings.map(x => {
-  //     console.log(x.Constructor.name)
-  //   })
-  // })
+  const data = constructorInfo.map(x => {
+    x.ConstructorStandings.map(x => {
+      console.log(x.Constructor.name) 
+    })
+  })
+  console.log(data)
 
   useEffect(() => {
     getConstructorStandings().then((result) => {
