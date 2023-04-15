@@ -36,7 +36,27 @@
 }
 
 .drivers-container .title {
+  border-top: 5px solid black;
+  border-right: 5px solid black;
+  border-top-right-radius: 10px;
+  padding-right: 10px;
+  width: 70%;
   margin-top: 8rem;
+}
+
+.drivers-container .title h1 {
+  font-size: 2.6rem;
+  margin: 0;
+  font-weight: 700;
+  margin-top: 30px;
+}
+
+.drivers-container .micro-text {
+  display: flex;
+  width: 70%;
+  background: rgba(240, 240, 240, 0.348);
+  padding: 10px;
+  margin-top: 50px;
 }
 
 .drivers-container .row {
@@ -62,7 +82,6 @@
   padding: 10px;
   flex: 0 0 calc(50% - 20px);
 }
-
 
 .listing-container .listing-wrapper .listing-standing {
   padding-bottom: 10px;
