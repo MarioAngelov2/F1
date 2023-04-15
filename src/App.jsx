@@ -2,10 +2,10 @@ import "./App.css";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import Races from "./components/Races";
-import DriverStandings from "./components/DriverStandings";
 import Home from "./components/Home";
-import ConstructorsStandigs from "./components/ConstructorsStandigs";
+import Races from "./components/Races/Races";
+import DriverStandings from "./components/Drivers/DriverStandings";
+import ConstructorsStandigs from "../src/components/Constructors/ConstructorsStandigs";
 import TeamList from "./components/Teams/TeamList";
 
 import { AnimatePresence } from "framer-motion";

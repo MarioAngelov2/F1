@@ -1,10 +1,10 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { getCurrentSeason, getDriversStandings } from "../services/reqester";
+import { getCurrentSeason, getDriversStandings } from "../../services/reqester";
 import RacesData from "./RacesData";
 
 import { motion } from "framer-motion";
-import "../style/Races.css";
+import "../../style/Races.css";
 
 const Races = () => {
   const [raceInfo, setRaceInfo] = useState([]);

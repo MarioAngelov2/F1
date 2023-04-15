@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import ConstructorsStandigsData from "../components/ConstructorsStandigsData";
-import { getConstructorStandings } from "../services/reqester";
+import ConstructorsStandigsData from "./ConstructorsStandigsData";
+import { getConstructorStandings } from "../../services/reqester";
 
-import "../style/ConstructorsStandings.css";
+import "../../style/ConstructorStandings.css";
 
 const ConstructorsStandigs = () => {
   const [constructorData, setConstructorData] = useState([]);

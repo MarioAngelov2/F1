@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { getCurrentSeason } from "../services/reqester";
-import { DateTime } from "../utils/DateTimeFormatter";
+import { getCurrentSeason } from "../../services/reqester";
+import { DateTime } from "../../utils/DateTimeFormatter";
 
-import "../style/Races.css";
+import "../../style/Races.css";
 import { BeatLoader } from "react-spinners";
 
 const RacesData = () => {

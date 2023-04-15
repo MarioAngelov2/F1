@@ -1,19 +1,14 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
-import { getDriversStandings } from "../services/reqester";
+import { getDriversStandings } from "../../services/reqester";
 import DriverStandingsData from "./DriverStandingsData";
 import { motion } from "framer-motion";
 
-import "../style/DriverStandings.css";
+import "../../style/DriverStandings.css";
 
 const DriverStandings = () => {
   const [driverInfo, setDriverInfo] = useState([]);
-  // const data = driverInfo.map(dr => {
-  //   dr.DriverStandings.map(x => {
-  //     console.log(x.Constructors[0].name)
-  //   })
-  // })
 
   //fetch data about the driver standings current season
   useEffect(() => {

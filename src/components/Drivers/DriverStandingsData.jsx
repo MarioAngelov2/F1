@@ -1,8 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { getDriversStandings } from "../services/reqester";
+import { getDriversStandings } from "../../services/reqester";
 
-import "../style/DriverStandings.css";
+import "../../style/DriverStandings.css";
 import { BeatLoader } from "react-spinners";
 
 const DriverStandingsData = () => {
