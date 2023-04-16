@@ -8,9 +8,6 @@ import { BeatLoader } from "react-spinners";
 const RacesData = () => {
   const [raceInfo, setRaceInfo] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  // const data = raceInfo.map(x => {
-  //   console.log(x.Qualifying.time )
-  // })
 
   useEffect(() => {
     getCurrentSeason().then((result) => {

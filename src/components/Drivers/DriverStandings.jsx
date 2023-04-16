@@ -27,12 +27,11 @@ const DriverStandings = () => {
       <div className="driverStandings-container">
         <main>
           <div className="main-content">
-            <div className="season-progress">
+            <div className="driver-progress">
               {driverInfo.map((standingList) => (
-                <React.Fragment key={standingList.season}>
-                  <h3>Season {standingList.season}</h3>
-                  <h4>Round {standingList.round}</h4>
-                </React.Fragment>
+                <div key={standingList.season} className="drivers-title">
+                  <h2>{standingList.season} Driver Standings</h2>
+                </div>
               ))}
             </div>
             <table>

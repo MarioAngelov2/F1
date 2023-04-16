@@ -40,6 +40,20 @@
 }
 
 .constructorStandings-container .constructor-progress {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 8rem;
+}
+
+.constructorStandings-container .constructor-progress .constructor-title {
+  width: 60%;
+  text-align: center;
+
+}
+
+.constructorStandings-container .constructor-progress .constructor-title h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 400;
 }

@@ -40,9 +40,21 @@
   background-color: rgb(242, 242, 242);
 }
 
-.driverStandings-container .main-content .season-progress {
-  text-align: center;
+.driverStandings-container .main-content .driver-progress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 0;
   margin-top: 8rem;
 }
 
+.driverStandings-container .main-content .driver-progress .drivers-title {
+  width: 60%;
+  text-align: center;
+}
+
+.driverStandings-container .main-content .driver-progress .drivers-title h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}

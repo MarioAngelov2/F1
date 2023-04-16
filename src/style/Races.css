@@ -12,7 +12,7 @@
   width: 60%;
   border-spacing: 0;
   margin-bottom: 7rem;
-  margin-top: 3rem;
+  margin-top: 1.5rem;
 }
 
 .races-container h3 {
@@ -43,4 +43,23 @@
 
 .races-container tbody tr:nth-child(odd) {
   background-color: rgb(242, 242, 242);
+}
+
+.races-container .main-content .race-title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8rem;
+  margin-bottom: 0;
+}
+
+.races-container .main-content .race-title-container .race-title {
+  width: 60%;
+  text-align: center;
+}
+
+.races-container .main-content .race-title-container .race-title h2 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 400;
 }

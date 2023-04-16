@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { getCurrentSeason, getDriversStandings } from "../../services/reqester";
+import { getDriversStandings } from "../../services/reqester";
 import RacesData from "./RacesData";
 
 import { motion } from "framer-motion";
@@ -26,11 +26,13 @@ const Races = () => {
       <div className="races-container">
         <main className="main">
           <div className="main-content">
-            {raceInfo.map((data) => (
-              <React.Fragment key={data.season}>
-                <h3>Season {data.season}</h3>
-              </React.Fragment>
-            ))}
+            <div className="race-title-container">
+              {raceInfo.map((data) => (
+                <div key={data.season} className="race-title">
+                  <h2>{data.season} Race Calendar</h2>
+                </div>
+              ))}
+            </div>
             <table>
               <thead>
                 <tr>

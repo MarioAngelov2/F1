@@ -28,10 +28,9 @@ const ConstructorsStandigs = () => {
           <div className="main-content">
             <div className="constructor-progress">
               {constructorData.map((constructor) => (
-                <>
-                  <h2>Season {constructor.season}</h2>
-                  <h3>Round {constructor.round}</h3>
-                </>
+                <div key={constructor.round} className="constructor-title">
+                  <h2>{constructor.season} Constructor Standings</h2>
+                </div>
               ))}
             </div>
             <table>
