@@ -1,18 +1,29 @@
 import { useState, useEffect } from "react";
+import { useQuery } from "@tanstack/react-query";
 import { getConstructorStandings } from "../../services/reqester";
 
 const ConstructorsStandigsData = () => {
-  const [constructorInfo, setConstructorInfo] = useState([]);
+  const constructorStandingsInfo = useQuery(
+    ["constructorStandings"],
+    getConstructorStandings
+  );
 
-  useEffect(() => {
-    getConstructorStandings().then((result) => {
-      setConstructorInfo(
-        Object.values(result.MRData.StandingsTable.StandingsLists)
-      );
-    });
-  }, []);
+  const isLoading = constructorStandingsInfo.isLoading;
+  const isError = constructorStandingsInfo.isError;
 
-  return constructorInfo.map((constructor) => 
+  if (isError) {
+    return <div>Error</div>;
+  }
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  const constructorinfo = Object.values(
+    constructorStandingsInfo.data.MRData.StandingsTable.StandingsLists
+  );
+
+  return constructorinfo.map((constructor) =>
     constructor.ConstructorStandings.map((constructor) => (
       <tr key={constructor.Constructor.constructorId}>
         <td className="constructor-pos">{constructor.position}</td>
@@ -24,7 +35,7 @@ const ConstructorsStandigsData = () => {
         <td className="constructor-wins">{constructor.wins}</td>
       </tr>
     ))
-  )
+  );
 };
 
 export default ConstructorsStandigsData;

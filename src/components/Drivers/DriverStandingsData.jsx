@@ -1,30 +1,34 @@
-import React from "react";
 import { useState, useEffect } from "react";
+import { useQuery } from "@tanstack/react-query";
 import { getDriversStandings } from "../../services/reqester";
 
 import "../../style/DriverStandings.css";
 import { BeatLoader } from "react-spinners";
 
 const DriverStandingsData = () => {
-  const [driverInfo, setDriverInfo] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const driverInfoStandings = useQuery(
+    ["driverStandingsInfo"],
+    getDriversStandings
+  );
+  const isLoading = driverInfoStandings.isLoading;
+  const isError = driverInfoStandings.isError;
+  const isFetching = driverInfoStandings.isFetching;
 
-  useEffect(() => {
-    getDriversStandings().then((result) => {
-      setDriverInfo(Object.values(result.MRData.StandingsTable.StandingsLists));
-      setIsLoading(false);
-    });
-  }, []);
+  if (isError) {
+    return <div>Error fetching data</div>;
+  }
 
   if (isLoading) {
     return (
-      <tr key="loading-spinner">
-        <td colSpan={5}>
-          <BeatLoader size={10} color="#3b3b3b" loading={setIsLoading} />
-        </td>
-      </tr>
+      <div className="loading-spinner">
+        <BeatLoader size={10} color="#3b3b3b" />
+      </div>
     );
   }
+
+  const driverInfo = Object.values(
+    driverInfoStandings.data.MRData.StandingsTable.StandingsLists
+  );
 
   return driverInfo.map((driver) =>
     driver.DriverStandings.map((driver) => (

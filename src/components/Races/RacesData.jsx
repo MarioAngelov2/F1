@@ -1,28 +1,24 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
 import { getCurrentSeason } from "../../services/reqester";
 import { DateTime } from "../../utils/DateTimeFormatter";
 
 import "../../style/Races.css";
-import { BeatLoader } from "react-spinners";
 
 const RacesData = () => {
-  const [raceInfo, setRaceInfo] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const raceInfoQuery = useQuery(["raceInfo"], getCurrentSeason);
+  const isLoading = raceInfoQuery.isLoading;
+  const isError = raceInfoQuery.isError;
 
-  useEffect(() => {
-    getCurrentSeason().then((result) => {
-      setRaceInfo(Object.values(result.MRData.RaceTable.Races));
-      setIsLoading(false);
-    });
-  }, []);
+  if (isError) {
+    return <div>Error Fetching Data</div>;
+  }
 
   if (isLoading) {
-    <tr key="loading-spinner">
-      <td colSpan={5}>
-        <BeatLoader size={10} color="#3b3b3b" loading={setIsLoading} />
-      </td>
-    </tr>;
+    return <div>Loading...</div>;
   }
+
+  const raceInfo = Object.values(raceInfoQuery.data.MRData.RaceTable.Races);
 
   return raceInfo.map((race) => (
     <tr key={race.round}>

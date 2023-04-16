@@ -8,27 +8,33 @@ import DriverStandings from "./components/Drivers/DriverStandings";
 import ConstructorsStandigs from "../src/components/Constructors/ConstructorsStandigs";
 import TeamList from "./components/Teams/TeamList";
 
+import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
+
 import { AnimatePresence } from "framer-motion";
 
 function App() {
   const location = useLocation();
+  const queryCliend = new QueryClient();
   return (
-    <div className="App">
-      <Navbar />
-      <AnimatePresence mode="wait">
-        <Routes location={location} key={location.pathname}>
-          <Route path="/home" element={<Home />} />
-          <Route path="/races" element={<Races />} />
-          <Route path="/driver-standings" element={<DriverStandings />} />
-          <Route
-            path="/constructor-standings"
-            element={<ConstructorsStandigs />}
-          />
-          <Route path="/teams" element={<TeamList />} />
-        </Routes>
-      </AnimatePresence>
-      <Footer />
-    </div>
+    <QueryClientProvider client={queryCliend}>
+      <div className="App">
+        <Navbar />
+        <AnimatePresence mode="wait">
+          <Routes location={location} key={location.pathname}>
+            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/races" element={<Races />} />
+            <Route path="/driver-standings" element={<DriverStandings />} />
+            <Route
+              path="/constructor-standings"
+              element={<ConstructorsStandigs />}
+            />
+            <Route path="/teams" element={<TeamList />} />
+          </Routes>
+        </AnimatePresence>
+        <Footer />
+      </div>
+    </QueryClientProvider>
   );
 }
 

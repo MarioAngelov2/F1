@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useQuery } from "@tanstack/react-query";
 import ConstructorsStandigsData from "./ConstructorsStandigsData";
 import { getConstructorStandings } from "../../services/reqester";
 
@@ -6,15 +7,23 @@ import { motion } from "framer-motion";
 import "../../style/ConstructorStandings.css";
 
 const ConstructorsStandigs = () => {
-  const [constructorData, setConstructorData] = useState([]);
+  const constructorStandingsInfo = useQuery(
+    ["constructorStandingsInfo"],
+    getConstructorStandings
+  );
 
-  useEffect(() => {
-    getConstructorStandings().then((result) => {
-      setConstructorData(
-        Object.values(result.MRData.StandingsTable.StandingsLists)
-      );
-    });
-  }, []);
+  const isLoading = constructorStandingsInfo.isLoading;
+  const isError = constructorStandingsInfo.isError;
+
+  if (isError) {
+    return <div>Error</div>
+  }
+
+  if (isLoading) {
+    return <div>Loading...</div>
+  }
+
+  const constructorData = Object.values(constructorStandingsInfo.data.MRData.StandingsTable.StandingsLists)
 
   return (
     <motion.div

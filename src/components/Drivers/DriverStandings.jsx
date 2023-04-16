@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { useQuery } from "@tanstack/react-query";
 
 import { getDriversStandings } from "../../services/reqester";
 import DriverStandingsData from "./DriverStandingsData";
@@ -8,14 +9,20 @@ import { motion } from "framer-motion";
 import "../../style/DriverStandings.css";
 
 const DriverStandings = () => {
-  const [driverInfo, setDriverInfo] = useState([]);
+  // const [driverInfo, setDriverInfo] = useState([]);
+  const driverStandingsInfo = useQuery(["driverStandingsInfo"], getDriversStandings);
+  const isLoading = driverStandingsInfo.isLoading;
+  const isError = driverStandingsInfo.isError;
 
-  //fetch data about the driver standings current season
-  useEffect(() => {
-    getDriversStandings().then((result) => {
-      setDriverInfo(Object.values(result.MRData.StandingsTable.StandingsLists));
-    });
-  }, []);
+  if (isError) {
+    return <div>Error Fetching Data</div>
+  }
+
+  if (isLoading) {
+    return <div>Loading...</div>
+  }
+  
+  const driverInfo = Object.values(driverStandingsInfo.data.MRData.StandingsTable.StandingsLists)
 
   return (
     <motion.div

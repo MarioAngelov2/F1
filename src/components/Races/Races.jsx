@@ -1,5 +1,5 @@
-import React from "react";
 import { useState, useEffect } from "react";
+import { useQuery } from "@tanstack/react-query";
 import { getDriversStandings } from "../../services/reqester";
 import RacesData from "./RacesData";
 
@@ -7,14 +7,29 @@ import { motion } from "framer-motion";
 import "../../style/Races.css";
 
 const Races = () => {
-  const [raceInfo, setRaceInfo] = useState([]);
+  // const [raceInfo, setRaceInfo] = useState([]);
+
+  const driverStandingsQuery = useQuery(
+    ["driverStandings"],
+    getDriversStandings
+  );
+  const isLoading = driverStandingsQuery.isLoading;
+  const isError = driverStandingsQuery.isError;
+
+  // handle error state
+  if (isError) {
+    return <div>Error Fetching Data</div>;
+  }
+
+  // handle loading state
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
 
   // fetch data about current season
-  useEffect(() => {
-    getDriversStandings().then((result) => {
-      setRaceInfo(Object.values(result.MRData.StandingsTable.StandingsLists));
-    });
-  }, []);
+  const raceInfo = Object.values(
+    driverStandingsQuery.data.MRData.StandingsTable.StandingsLists
+  );
 
   return (
     <motion.div
