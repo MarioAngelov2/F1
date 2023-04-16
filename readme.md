@@ -31,3 +31,4 @@ This project also utilizes several third-party libraries to enhance its function
 - Material-UI 
 - React Router DOM
 - React Spinners
+- React Query
