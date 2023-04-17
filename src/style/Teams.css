@@ -26,7 +26,7 @@
   width: 100%;
 } */
 
-.drivers-container {
+.teams-container {
   display: flex;
   width: 100%;
   height: auto;
@@ -35,7 +35,7 @@
   flex-direction: column;
 }
 
-.drivers-container .title {
+.teams-container .title {
   border-top: 5px solid black;
   border-right: 5px solid black;
   border-top-right-radius: 10px;
@@ -44,14 +44,14 @@
   margin-top: 8rem;
 }
 
-.drivers-container .title h1 {
+.teams-container .title h1 {
   font-size: 2.6rem;
   margin: 0;
   font-weight: 700;
   margin-top: 30px;
 }
 
-.drivers-container .micro-text {
+.teams-container .micro-text {
   display: flex;
   width: 70%;
   background: rgba(240, 240, 240, 0.348);
@@ -59,7 +59,7 @@
   margin-top: 50px;
 }
 
-.drivers-container .row {
+.teams-container .row {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,12 +69,12 @@
   max-width: 70%;
 }
 
-.drivers-container .listing-container {
+.teams-container .listing-container {
   flex: 0 0 50%;
   max-width: 800px;
 }
 
-.drivers-container .row .listing-wrapper {
+.teams-container .row .listing-wrapper {
   border-top: solid 2px #000;
   border-right: solid 2px #000;
   border-top-right-radius: 10px;
@@ -153,7 +153,7 @@
 }
 
 .listing-container .listing-wrapper .listing-info .team-car-image img {
-  width: 80%;
+  width: 100%;
   background-position: center;
   margin-top: 10px;
 }
