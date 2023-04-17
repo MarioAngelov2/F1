@@ -12,7 +12,7 @@ const TeamList = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="drivers-container">
+      <div className="teams-container">
         <div className="title">
           <h1>F1 TEAMS 2023</h1>
         </div>
