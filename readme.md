@@ -32,3 +32,8 @@ This project also utilizes several third-party libraries to enhance its function
 - React Router DOM
 - React Spinners
 - React Query
+
+
+## Credits
+
+- Formula One website for providing valuable information and resources.
