@@ -16,6 +16,7 @@ const Navbar = () => {
         <Link to="/driver-standings">Driver Standings</Link>
         <Link to="/constructor-standings">Constructor Standings</Link>
         <Link to="/teams">Teams</Link>
+        <Link to="/drivers">Drivers</Link>
       </div>
     </div>
   );

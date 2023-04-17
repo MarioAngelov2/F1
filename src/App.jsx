@@ -7,6 +7,7 @@ import Races from "./components/Races/Races";
 import DriverStandings from "./components/Drivers/DriverStandings";
 import ConstructorsStandigs from "../src/components/Constructors/ConstructorsStandigs";
 import TeamList from "./components/Teams/TeamList";
+import DriverList from "./components/Drivers/DriverList";
 
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 
@@ -30,6 +31,7 @@ function App() {
               element={<ConstructorsStandigs />}
             />
             <Route path="/teams" element={<TeamList />} />
+            <Route path="/drivers" element={<DriverList />} />
           </Routes>
         </AnimatePresence>
         <Footer />
