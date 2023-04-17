@@ -39,12 +39,12 @@
   margin-top: 3rem;
   margin-bottom: 10rem;
   max-width: 70%;
+  gap: 1rem;
 }
 
 .drivers-container .main-container {
   flex: 0 0 25%;
   max-width: 800px;
-  margin-right: 10px;
 }
 
 .drivers-container .main-container .listing-container {
@@ -80,6 +80,7 @@
   font-size: 26px;
   line-height: 24px;
   text-align: right;
+  font-weight: 700;
 }
 
 .drivers-container .main-container .card-info {
