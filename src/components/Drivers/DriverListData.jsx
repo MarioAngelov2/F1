@@ -21,7 +21,9 @@ const DriverListData = () => {
               <div className="card-info">
                 <div className="driver-headerInfo">
                   <div className="driver">
-                    {driver.firstName} {driver.lastName}
+                    <h5>
+                      {driver.firstName} {driver.lastName}
+                    </h5>
                   </div>
                   <div className="nationality-img">
                     <img src={driver.nationImg} />
