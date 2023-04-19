@@ -1,31 +1,3 @@
-/* .drivers-container {
-  display: flex;
-  width: 100%;
-  height: 100vh;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.drivers-container .row {
-  width: 100%;
-  max-width: 800px;
-  height: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  place-items: center;
-}
-
-.drivers-container .listing-container {
-  display: flex;
-  width: 100%;
-  height: 50%;
-}
-
-.drivers-container .listing-container .card {
-  width: 100%;
-} */
-
 .teams-container {
   display: flex;
   width: 100%;
@@ -66,12 +38,24 @@
   flex-wrap: wrap;
   margin-top: 3rem;
   margin-bottom: 10rem;
-  max-width: 70%;
+  width: 70%;
 }
 
 .teams-container .listing-container {
   flex: 0 0 50%;
-  max-width: 800px;
+  max-width: 680px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1920px) {
+
+  .teams-container .listing-container {
+    flex: 0 0 50%;
+    max-width: 440px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
 }
 
 .teams-container .row .listing-wrapper {
@@ -79,8 +63,8 @@
   border-right: solid 2px #000;
   border-top-right-radius: 10px;
   margin-top: 40px;
-  padding: 10px;
-  flex: 0 0 calc(50% - 20px);
+  padding-top: 10px;
+  padding-right: 10px;
 }
 
 .listing-container .listing-wrapper .listing-standing {
@@ -129,7 +113,7 @@
 
 .listing-container .listing-wrapper .listing-info .listing-drivers {
   display: flex;
-  gap: 6rem;
+  justify-content: space-between;
   margin-bottom: 10px;
   font-weight: 600;
 }
@@ -142,18 +126,21 @@
   max-width: 38%;
   overflow: hidden;
   margin-top: 20px;
-  display: flex;
-  align-items: center;
+  padding-bottom: 7px;
+  /* display: flex;
+  align-items: center; */
 }
 
 .listing-container .listing-wrapper .listing-info .team-car-image {
   display: flex;
   align-items: center;
   justify-content: center;
+  max-width: 420px;
+  margin: auto;
 }
 
 .listing-container .listing-wrapper .listing-info .team-car-image img {
-  width: 100%;
+  max-width: 100%;
   background-position: center;
   margin-top: 10px;
 }
