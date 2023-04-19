@@ -59,7 +59,6 @@
 }
 
 .drivers-container .main-container .listing-container:hover {
-  cursor: pointer;
   transform: scale(1.05);
   transition: ease-in-out 0.2s;
 }
