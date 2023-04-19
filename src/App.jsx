@@ -1,5 +1,5 @@
 import "./App.css";
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Router, Routes, useLocation } from "react-router-dom";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
@@ -20,9 +20,9 @@ function App() {
     <QueryClientProvider client={queryCliend}>
       <div className="App">
         <Navbar />
-        <AnimatePresence mode="wait">
+        <AnimatePresence mode="wait" initial={false}>
           <Routes location={location} key={location.pathname}>
-            <Route path="/" element={<Home />} />
+            <Route key={Router.pathname} path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/races" element={<Races />} />
             <Route path="/driver-standings" element={<DriverStandings />} />

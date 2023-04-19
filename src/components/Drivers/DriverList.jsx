@@ -7,10 +7,10 @@ import "../../style/Drivers.css";
 const DriverList = () => {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      initial={{ y: "100%" }}
+      animate={{ y: "0" }}
+      transition={{ duration: 0.5, ease: "easeOut"}}
       exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
     >
       <div className="drivers-container">
         <div className="title">
@@ -23,9 +23,9 @@ const DriverList = () => {
             drivers on and off the track.
           </p>
         </div>
-        <div className="drivers-row">
+        <motion.div animate={{x: 0}} initial={{ x: "200%"}} transition={{delay: 0.5, duration: 0.5}} className="drivers-row">
           <DriverListData />
-        </div>
+        </motion.div>
       </div>
     </motion.div>
   );

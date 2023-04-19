@@ -35,8 +35,8 @@ const Races = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
+      transition={{ duration: 0.75, ease: "easeOut" }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
     >
       <div className="races-container">
         <main className="main">

@@ -16,21 +16,23 @@ const ConstructorsStandigs = () => {
   const isError = constructorStandingsInfo.isError;
 
   if (isError) {
-    return <div>Error</div>
+    return <div>Error</div>;
   }
 
   if (isLoading) {
-    return <div>Loading...</div>
+    return <div>Loading...</div>;
   }
 
-  const constructorData = Object.values(constructorStandingsInfo.data.MRData.StandingsTable.StandingsLists)
+  const constructorData = Object.values(
+    constructorStandingsInfo.data.MRData.StandingsTable.StandingsLists
+  );
 
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
+      transition={{ duration: 0.75, ease: "easeOut" }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
     >
       <div className="constructorStandings-container">
         <main>
