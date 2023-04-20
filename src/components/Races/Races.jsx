@@ -55,7 +55,7 @@ const Races = () => {
                   <th>Country</th>
                   <th>Grand Prix</th>
                   <th>Qualifying</th>
-                  <th>Race</th>
+                  <th >Race</th>
                   <th>Circuit</th>
                 </tr>
               </thead>

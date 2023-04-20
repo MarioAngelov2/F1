@@ -22,18 +22,24 @@ const RacesData = () => {
 
   return raceInfo.map((race) => (
     <tr key={race.round}>
-      <td className="race-round">{race.round}</td>
-      <td className="country-flag">
+      <td data-cell="round" className="race-round">
+        {race.round}
+      </td>
+      <td data-cell="country" className="country-flag">
         {race.Circuit.Location.locality}, {race.Circuit.Location.country}
       </td>
-      <td className="grand-prix">{race.raceName}</td>
-      <td className="qualy-info">
+      <td data-cell="grand-prix" className="grand-prix">
+        {race.raceName}
+      </td>
+      <td data-cell="qualifying" className="qualy-info">
         <DateTime date={race.Qualifying.date} time={race.Qualifying.time} />
       </td>
-      <td className="race-info">
+      <td data-cell="race" className="race-info">
         <DateTime date={race.date} time={race.time} />
       </td>
-      <td className="curcuit-name">{race.Circuit.circuitName}</td>
+      <td data-cell="circuit" className="curcuit-name">
+        {race.Circuit.circuitName}
+      </td>
     </tr>
   ));
 };

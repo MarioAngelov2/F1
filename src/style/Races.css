@@ -1,18 +1,21 @@
 .races-container {
   display: flex;
-  width: 100%;
+  /* width: 100%; */
+  width: min(1200px, 100% - 3rem);
+  margin-inline: auto;
   height: auto;
 }
 
 .races-container table {
   margin: auto;
-  border-collapse: separate;
+  border-collapse: collapse;
   border-spacing: 10px;
-  table-layout: fixed;
-  width: 60%;
+  width: 100%;
   border-spacing: 0;
   margin-bottom: 7rem;
   margin-top: 1.5rem;
+  /* border-collapse: separate; */
+  /* table-layout: fixed; */
 }
 
 .races-container h3 {
@@ -62,4 +65,39 @@
   text-transform: uppercase;
   font-size: 2rem;
   font-weight: 400;
+}
+
+@media (max-width: 650px) {
+  .races-container {
+    justify-content: center;
+  }
+
+  .races-container th {
+    display: none;
+  }
+
+  .races-container td {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    margin: auto;
+    gap: 1rem;
+    grid-template-columns: 10ch auto;
+    padding: 0.5rem 1rem;
+  }
+
+  .races-container td:first-child {
+    padding-top: 2rem;
+  }
+
+  .races-container td:last-child {
+    padding-bottom: 2rem;
+  }
+
+  .races-container td::before {
+    content: attr(data-cell) ": ";
+    padding-right: 3rem;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
 }
