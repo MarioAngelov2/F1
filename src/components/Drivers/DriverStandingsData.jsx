@@ -33,13 +33,13 @@ const DriverStandingsData = () => {
   return driverInfo.map((driver) =>
     driver.DriverStandings.map((driver) => (
       <tr key={driver.Driver.driverId}>
-        <td className="driver-position">{driver.position}</td>
-        <td className="driver-name">
+        <td data-cell="position" className="driver-position">{driver.position}</td>
+        <td data-cell="driver" className="driver-name">
           {driver.Driver.givenName} {driver.Driver.familyName}
         </td>
-        <td className="driver-nationality">{driver.Driver.nationality}</td>
-        <td className="driver-car">{driver.Constructors[0].name}</td>
-        <td className="driver-points">{driver.points}</td>
+        <td data-cell="nationality" className="driver-nationality">{driver.Driver.nationality}</td>
+        <td data-cell="car" className="driver-car">{driver.Constructors[0].name}</td>
+        <td data-cell="pts" className="driver-points">{driver.points}</td>
       </tr>
     ))
   );

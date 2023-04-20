@@ -1,6 +1,5 @@
 .races-container {
   display: flex;
-  /* width: 100%; */
   width: min(1200px, 100% - 3rem);
   margin-inline: auto;
   height: auto;
@@ -14,8 +13,6 @@
   border-spacing: 0;
   margin-bottom: 7rem;
   margin-top: 1.5rem;
-  /* border-collapse: separate; */
-  /* table-layout: fixed; */
 }
 
 .races-container h3 {
@@ -39,7 +36,7 @@
 
 .races-container td {
   word-wrap: break-word;
-  max-width: 12.5rem;
+  width: 12.5rem;
   padding: 20px;
   font-size: 14px;
 }
