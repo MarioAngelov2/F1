@@ -1,8 +1,6 @@
 .home-container {
   height: 100vh;
-  max-height: calc(
-    100vh - 100px
-  ); /* subtract the height of the footer from the container's max-height */
+  /* subtract the height of the footer from the container's max-height */
   position: relative;
   overflow: hidden;
 }
@@ -113,3 +111,4 @@
   color: black;
   transform: scale(1.05);
 }
+
