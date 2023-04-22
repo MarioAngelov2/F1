@@ -34,13 +34,6 @@
   text-transform: uppercase;
 }
 
-.home-container .btn span {
-  color: white;
-  font-weight: 500;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-}
-
 .home-container .btn {
   display: flex;
   gap: 1rem;
@@ -48,6 +41,13 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 4rem;
+}
+
+.home-container .btn span {
+  color: white;
+  font-weight: 500;
+  font-size: 1.2rem;
+  text-transform: uppercase;
 }
 
 .home-container .btn .arrow-btn {
@@ -66,6 +66,47 @@
   color: black;
   background-color: white;
   transform: scale(1.1);
+}
+
+@media screen and (max-width: 1480px) {
+  .home-container .header-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+  }
+
+  .home-container h1 {
+    color: white;
+    font-weight: 700;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-left: 3.5rem;
+  }
+
+  .home-container .img-container img {
+    width: 100%;
+    max-width: 1000px;
+  }
+
+  .home-container .btn span {
+    color: white;
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin-top: 10px;
+  }
+
+  .home-container .btn .arrow-btn {
+    width: 80px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    border: 1px solid white;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+  }
 }
 
 @media screen and (max-width: 1280px) {
@@ -104,6 +145,7 @@
     font-weight: 700;
     font-size: clamp(1.5rem, 5vw, 2rem);
     text-transform: uppercase;
+    margin-left: 1rem;
   }
 
   .home-container .btn span {
