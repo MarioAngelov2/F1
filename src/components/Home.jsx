@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import carImg from "../assets/Haas.jpeg";
 import "../style/Home.css";
@@ -8,9 +8,10 @@ import { Button } from "@mui/material";
 
 const Home = () => {
   const navigate = useNavigate();
+
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <motion.div
@@ -22,14 +23,16 @@ const Home = () => {
     >
       <motion.div
         animate={{ y: 0 }}
-        initial={{ y: "100%" }}
+        initial={{ y: "-100%" }}
         transition={{ duration: 0.8 }}
         className="header-title"
       >
         <h1>The Power Behind the Podium: Meet the Leading F1 Teams</h1>
-        <div className="img-container">
+      </motion.div>
+      <motion.div animate={{ y: 0 }}
+        initial={{ y: "100%" }}
+        transition={{ duration: 0.8 }} className="img-container">
         <img src={carImg} />
-        </div>
       </motion.div>
       <motion.div
         animate={{ x: 0 }}
