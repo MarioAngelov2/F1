@@ -7,7 +7,7 @@ import { Button } from "@mui/material";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
-  const [showLinks, setShowLinks] = useState(true);
+  const [showLinks, setShowLinks] = useState(false);
 
   return (
     <div className="navbar-container">
