@@ -97,6 +97,10 @@
   }
 }
 
+.navbar-container .hamburger-icon {
+  color: white;
+}
+
 @media only screen and (max-width: 768px) {
   .navbar-container .f1-logo img {
     height: 100%;

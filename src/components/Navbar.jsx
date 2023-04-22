@@ -4,7 +4,6 @@ import F1Logo from "../assets/F1-LOGO.png";
 import "../style/Navbar.css";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Button } from "@mui/material";
-import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
@@ -27,7 +26,7 @@ const Navbar = () => {
         className="hamburger-btn"
         onClick={() => setShowLinks(!showLinks)}
       >
-        <MenuIcon fontSize="large" />
+        <MenuIcon fontSize="large" className="hamburger-icon"/>
       </Button>
     </div>
   );
