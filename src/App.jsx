@@ -20,7 +20,7 @@ function App() {
     <QueryClientProvider client={queryCliend}>
       <div className="App">
         <Navbar />
-        <AnimatePresence mode="wait" initial={false}>
+        <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
             <Route key={Router.pathname} path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
