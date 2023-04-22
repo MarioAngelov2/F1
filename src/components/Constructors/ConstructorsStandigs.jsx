@@ -7,6 +7,10 @@ import { motion } from "framer-motion";
 import "../../style/ConstructorStandings.css";
 
 const ConstructorsStandigs = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const constructorStandingsInfo = useQuery(
     ["constructorStandingsInfo"],
     getConstructorStandings

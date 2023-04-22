@@ -1,15 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import DriverListData from "./DriverListData";
 import { motion } from "framer-motion";
 
 import "../../style/Drivers.css";
 
 const DriverList = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <motion.div
       initial={{ y: "100%" }}
       animate={{ y: "0" }}
-      transition={{ duration: 0.5, ease: "easeOut"}}
+      transition={{ duration: 0.5, ease: "easeOut" }}
       exit={{ opacity: 0 }}
     >
       <div className="drivers-container">
@@ -23,7 +27,12 @@ const DriverList = () => {
             drivers on and off the track.
           </p>
         </div>
-        <motion.div animate={{x: 0}} initial={{ x: "200%"}} transition={{delay: 0.5, duration: 0.5}} className="drivers-row">
+        <motion.div
+          animate={{ x: 0 }}
+          initial={{ x: "200%" }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+          className="drivers-row"
+        >
           <DriverListData />
         </motion.div>
       </div>

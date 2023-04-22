@@ -9,20 +9,28 @@ import { motion } from "framer-motion";
 import "../../style/DriverStandings.css";
 
 const DriverStandings = () => {
-  // const [driverInfo, setDriverInfo] = useState([]);
-  const driverStandingsInfo = useQuery(["driverStandingsInfo"], getDriversStandings);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const driverStandingsInfo = useQuery(
+    ["driverStandingsInfo"],
+    getDriversStandings
+  );
   const isLoading = driverStandingsInfo.isLoading;
   const isError = driverStandingsInfo.isError;
 
   if (isError) {
-    return <div>Error Fetching Data</div>
+    return <div>Error Fetching Data</div>;
   }
 
   if (isLoading) {
-    return <div>Loading...</div>
+    return <div>Loading...</div>;
   }
-  
-  const driverInfo = Object.values(driverStandingsInfo.data.MRData.StandingsTable.StandingsLists)
+
+  const driverInfo = Object.values(
+    driverStandingsInfo.data.MRData.StandingsTable.StandingsLists
+  );
 
   return (
     <motion.div

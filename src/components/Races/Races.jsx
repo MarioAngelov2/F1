@@ -7,7 +7,9 @@ import { motion } from "framer-motion";
 import "../../style/Races.css";
 
 const Races = () => {
-  // const [raceInfo, setRaceInfo] = useState([]);
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   const driverStandingsQuery = useQuery(
     ["driverStandings"],
