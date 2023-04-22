@@ -59,14 +59,32 @@
   border: 1px solid white;
   cursor: pointer;
   transition: ease-in-out 0.3s;
-  
 }
 
 .home-container .btn .arrow-btn:hover {
   transition: ease-in-out 0.3s;
   color: black;
   background-color: white;
-  transform: scale(1.10);
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 1280px) {
+  .home-container .header-title {
+    display: flex;
+    width: 60%;
+  }
+
+  .home-container .img-container img {
+    width: 100%;
+    max-width: 1000px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .home-container .header-title {
+    display: flex;
+    width: 70%;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -75,4 +93,35 @@
   }
 }
 
+@media screen and (max-width: 425px) {
+  .home-container .header-title {
+    display: flex;
+    width: 85%;
+  }
 
+  .home-container h1 {
+    color: white;
+    font-weight: 700;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    text-transform: uppercase;
+  }
+
+  .home-container .btn span {
+    color: white;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-top: 10px;
+  }
+
+  .home-container .btn .arrow-btn {
+    width: 70px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    border: 1px solid white;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+  }
+}
