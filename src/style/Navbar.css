@@ -20,7 +20,7 @@
 }
 .navbar-container .links a {
   color: white;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 200;
   font-size: 14px;
   letter-spacing: 1px;
@@ -45,6 +45,121 @@
 }
 
 .navbar-container .f1-logo img:hover {
-  transform: scale(1.20);
+  transform: scale(1.2);
   transition: ease-in-out 0.2s;
+}
+
+.navbar-container .hamburger-btn {
+  display: none;
+  margin-right: 60px;
+}
+
+.navbar-container #hidden {
+  display: flex;
+}
+
+@media only screen and (max-width: 960px) {
+  .navbar-container .hamburger-btn {
+    display: flex;
+  }
+
+  .navbar-container .links {
+    display: none;
+  }
+
+  .navbar-container .f1-logo img {
+    height: 100%;
+    margin-left: 0rem;
+    transition: ease-in-out 0.2s;
+  }
+
+  .navbar-container #hidden {
+    position: absolute;
+    left: 0;
+    top: 60px;
+    height: auto;
+    max-height: 320px;
+    width: 100%;
+    background-color: rgb(221, 1, 1);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navbar-container #hidden a {
+    padding: 14px;
+  }
+
+  .navbar-container #hidden a:hover {
+    background-color: rgb(221, 1, 1);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar-container .f1-logo img {
+    height: 100%;
+    margin-left: 0rem;
+    transition: ease-in-out 0.2s;
+  }
+
+  .navbar-container #hidden {
+    position: absolute;
+    left: 0;
+    top: 60px;
+    height: auto;
+    max-height: 320px;
+    width: 97%;
+    background-color: rgb(221, 1, 1);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .navbar-container .f1-logo img {
+    height: 100%;
+    margin-left: 0rem;
+    transition: ease-in-out 0.2s;
+  }
+
+  .navbar-container #hidden {
+    position: absolute;
+    left: 0;
+    top: 60px;
+    height: auto;
+    max-height: 320px;
+    width: 95%;
+    background-color: rgb(221, 1, 1);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .navbar-container .f1-logo img {
+    height: 100%;
+    margin-left: -1rem;
+    transition: ease-in-out 0.2s;
+  }
+
+  .navbar-container #hidden {
+    position: absolute;
+    left: 0;
+    top: 60px;
+    height: auto;
+    max-height: 320px;
+    width: 94%;
+    background-color: rgb(221, 1, 1);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+  }
 }
