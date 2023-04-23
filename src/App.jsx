@@ -8,6 +8,7 @@ import DriverStandings from "./components/Drivers/DriverStandings";
 import ConstructorsStandigs from "../src/components/Constructors/ConstructorsStandigs";
 import TeamList from "./components/Teams/TeamList";
 import DriverList from "./components/Drivers/DriverList";
+import Driver from "./components/Drivers/Driver";
 
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 
@@ -22,7 +23,7 @@ function App() {
         <Navbar />
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
-            <Route key={Router.pathname} path="/" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/races" element={<Races />} />
             <Route path="/driver-standings" element={<DriverStandings />} />
@@ -32,6 +33,7 @@ function App() {
             />
             <Route path="/teams" element={<TeamList />} />
             <Route path="/drivers" element={<DriverList />} />
+            <Route path="/drivers/:id" element={<Driver />} />
           </Routes>
         </AnimatePresence>
         <Footer />
