@@ -4,23 +4,13 @@ import { useDriversData } from "../../hooks/useDriversData";
 import { useNavigate } from "react-router-dom";
 
 const DriverListData = () => {
-  const navigate = useNavigate();
   const driverListApiData = useDriversData();
-  const [selectedDriverId, setSelectedDriverId] = useState(null);
-
-  const handleDriverClick = (driverId) => {
-    setSelectedDriverId(driverId);
-    navigate(`/drivers/${driverId}`);
-  };
 
   return (
     <>
       {driverListApiData.map((driver) => (
         <div key={driver.id} className="main-container">
-          <div
-            className="listing-container"
-            onClick={() => handleDriverClick(driver.id)}
-          >
+          <div className="listing-container">
             <div className="listing-item">
               <div className="card-header">
                 <div className="rank">{driver.position}</div>
