@@ -12,7 +12,6 @@ const DriverStandingsData = () => {
   );
   const isLoading = driverInfoStandings.isLoading;
   const isError = driverInfoStandings.isError;
-  const isFetching = driverInfoStandings.isFetching;
 
   if (isError) {
     return <div>Error fetching data</div>;
