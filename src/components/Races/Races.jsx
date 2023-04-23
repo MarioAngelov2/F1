@@ -18,17 +18,14 @@ const Races = () => {
   const isLoading = driverStandingsQuery.isLoading;
   const isError = driverStandingsQuery.isError;
 
-  // handle error state
   if (isError) {
     return <div>Error Fetching Data</div>;
   }
 
-  // handle loading state
   if (isLoading) {
     return <div>Loading...</div>;
   }
 
-  // fetch data about current season
   const raceInfo = Object.values(
     driverStandingsQuery.data.MRData.StandingsTable.StandingsLists
   );

@@ -1,10 +1,13 @@
 import React, { useEffect } from "react";
 import DriverListData from "./DriverListData";
+import { useDriversData } from "../../hooks/useDriversData";
 import { motion } from "framer-motion";
 
 import "../../style/Drivers.css";
 
 const DriverList = () => {
+  const driverListApiData = useDriversData();
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

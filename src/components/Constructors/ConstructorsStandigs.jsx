@@ -20,7 +20,7 @@ const ConstructorsStandigs = () => {
   const isError = constructorStandingsInfo.isError;
 
   if (isError) {
-    return <div>Error</div>;
+    return <div>Error Fetching Data</div>;
   }
 
   if (isLoading) {

@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import carImg from "../assets/Haas.jpeg";
+
 import "../style/Home.css";
+import carImg from "../assets/Haas.jpeg";
 import { motion } from "framer-motion";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
 import { Button } from "@mui/material";
