@@ -33,7 +33,6 @@ function App() {
             />
             <Route path="/teams" element={<TeamList />} />
             <Route path="/drivers" element={<DriverList />} />
-            <Route path="/drivers/:id" element={<Driver />} />
           </Routes>
         </AnimatePresence>
         <Footer />
