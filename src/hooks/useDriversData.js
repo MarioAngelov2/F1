@@ -45,6 +45,14 @@ export const useDriversData = () => {
                 "https://media.formula1.com/d_default_fallback_image.png/content/dam/fom-website/flags/Netherlands.jpg.transform/2col-retina/image.jpg",
               driverImg:
                 "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/M/MAXVER01_Max_Verstappen/maxver01.png.transform/2col-retina/image.png",
+              driverProfileImg:
+                "https://media.formula1.com/content/dam/fom-website/drivers/2023Drivers/verstappen.jpg.img.1024.medium.jpg/1677069646195.jpg",
+              podiums: "80",
+              points: "2080.5",
+              grandPrixEntry: "166",
+              worldChampionships: "2",
+              highestPosition: "1",
+              placeBirth: "Hasselt, Belgium",
             });
           } else if (data.Driver.driverId === "perez") {
             driverListApiData.push({
