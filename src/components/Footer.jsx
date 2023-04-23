@@ -36,6 +36,7 @@ const Footer = () => {
           sx={{ display: "flex", alignItems: "center" }}
           className="icons-container"
         >
+          <Button>
           <Link to={`https://github.com/MarioAngelov2`}>
             <GitHubIcon
               className="icon1"
@@ -43,6 +44,7 @@ const Footer = () => {
               sx={{ mr: 2, color: "white" }}
             />
           </Link>
+          </Button>
           <Button
             onClick={(event) => {
               copyToClipboard();
