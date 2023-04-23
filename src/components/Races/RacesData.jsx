@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { getCurrentSeason } from "../../services/reqester";
-import { DateTime } from "../../utils/DateTimeFormatter";
+import DateTime from "../../utils/DateTimeFormatter";
 
 import "../../style/Races.css";
 
