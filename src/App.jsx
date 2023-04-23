@@ -8,7 +8,6 @@ import DriverStandings from "./components/Drivers/DriverStandings";
 import ConstructorsStandigs from "../src/components/Constructors/ConstructorsStandigs";
 import TeamList from "./components/Teams/TeamList";
 import DriverList from "./components/Drivers/DriverList";
-import Driver from "./components/Drivers/Driver";
 
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 
