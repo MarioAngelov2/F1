@@ -48,7 +48,7 @@ export const useDriversData = () => {
               driverProfileImg:
                 "https://media.formula1.com/content/dam/fom-website/drivers/2023Drivers/verstappen.jpg.img.1024.medium.jpg/1677069646195.jpg",
               podiums: "80",
-              points: "2080.5",
+              maxPoints: "2080.5",
               grandPrixEntry: "166",
               worldChampionships: "2",
               highestPosition: "1",
