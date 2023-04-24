@@ -22,12 +22,12 @@ const Navbar = () => {
         <Link to="/teams">Teams</Link>
         <Link to="/drivers">Drivers</Link>
       </div>
-      <Button
+      <button
         className="hamburger-btn"
         onClick={() => setShowLinks(!showLinks)}
       >
         <MenuIcon fontSize="large" className="hamburger-icon"/>
-      </Button>
+      </button>
     </div>
   );
 };
