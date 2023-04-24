@@ -1,4 +1,4 @@
-# F1 <img src="/src/assets/F1-LOGO.png" alt="favicon" width="50" height="50"/>
+# <img src="/src/assets/F1-red-logo.png" alt="favicon" width="50" height="50"/>
 
 # Live Demo - https://f1-gamma.vercel.app
 
