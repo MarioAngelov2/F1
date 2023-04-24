@@ -47,7 +47,7 @@ In order to run the project: `npm run dev`
 <img src="public/Screenshots/ConstructorsStandings.png">
 <img src="public/Screenshots/Drivers.png">
 <img src="public/Screenshots/Teams.png">
-<img src="public/Screenshots/MobileHome.png" width="200" heigth="300">
+<img src="public/Screenshots/MobileHome.png" width="400" heigth="600">
 <img src="public/Screenshots/MobileRaceCalendar.png">
 <img src="public/Screenshots/MobileDriverSt.png">
 <img src="public/Screenshots/MobileConstructorSt.png">
