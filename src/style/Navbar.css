@@ -102,6 +102,10 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .navbar-container .hamburger-btn {
+    display: flex;
+  }
+
   .navbar-container .f1-logo img {
     height: 100%;
     margin-left: 0rem;
@@ -125,11 +129,14 @@
 
   .navbar-container .hamburger-btn {
     display: flex;
-    margin-right: 50px;
   }
 }
 
 @media only screen and (max-width: 425px) {
+  .navbar-container .hamburger-btn {
+    display: flex;
+  }
+
   .navbar-container .f1-logo img {
     height: 100%;
     margin-left: 0rem;
@@ -152,11 +159,14 @@
 
   .navbar-container .hamburger-btn {
     display: flex;
-    margin-right: 50px;
   }
 }
 
 @media only screen and (max-width: 375px) {
+  .navbar-container .hamburger-btn {
+    display: flex;
+  }
+
   .navbar-container .f1-logo img {
     height: 100%;
     margin-left: -1rem;
@@ -175,10 +185,5 @@
     align-items: center;
     flex-direction: column;
     padding: 0;
-  }
-
-  .navbar-container .hamburger-btn {
-    display: flex;
-    margin-right: 50px;
   }
 }
