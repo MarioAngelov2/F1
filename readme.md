@@ -41,6 +41,9 @@ You need to install all the packages in the root folder: `npm i`
 In order to run the project: `npm run dev`
 
 ## Screenshots 
+<img src="public/Screenshots/Home.png">
+<img src="public/Screenshots/RaceCalendar.png">
+<img src="public/Screenshots/DriverStandings.png">
 
 ## Credits
 
