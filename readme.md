@@ -1,8 +1,10 @@
-# <img src="/src/assets/F1-LOGO.png" alt="favicon" width="50" height="50"/>
+# F1 <img src="/src/assets/F1-LOGO.png" alt="favicon" width="50" height="50"/>
 
-The project is still in development process.
+# Live Demo - https://f1-gamma.vercel.app
 
-# Disclaimer 
+The client is deployed on [Vercel](https://vercel.com/) 
+
+## Disclaimer 
 
 All resources used in this project, including data and images, are for practice purposes only. No commercial use or copyright infringement is intended.
 
@@ -19,20 +21,24 @@ The race schedule page displays a list of upcoming and past races for the curren
 
 ## Details
 
-This project was built using `JavaScript` and `React`, and it retrieves Formula 1 racing data from the `Ergast Developer API`.
+This project was built using `Vite` build tool and `React`, and it retrieves Formula 1 racing data from the `Ergast Developer API`.
 
 Ergast provides a free-to-use, RESTful API for retrieving a wide variety of motorsport data, including Formula 1 racing results, driver and constructor standings, and more. In this project, I utilized the Ergast API to retrieve real-time data for driver standings, constructor standings, and the race schedule.
-
-In addition, this project was built using the `Vite` build tool. Vite is a fast and efficient build tool for modern web development that provides lightning-fast development server startup time, instant hot module replacement, and optimized production builds. 
 
 This project also utilizes several third-party libraries to enhance its functionality and user experience. These libraries include:
 
 - Framer Motion
 - Material-UI 
 - React Router DOM
-- React Spinners
-- React Query
+- TanStack Query
 
+## Usage 
+
+You will be working in the `src` folder. This will be designated as the `root` folder, where `package.json` should be placed.
+
+You need to install all the packages in the root folder: `npm i`
+
+In order to run the project: `npm run dev`
 
 ## Credits
 
