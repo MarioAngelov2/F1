@@ -48,11 +48,11 @@ In order to run the project: `npm run dev`
 <img src="public/Screenshots/Drivers.png">
 <img src="public/Screenshots/Teams.png">
 <img src="public/Screenshots/MobileHome.png" width="400" heigth="600">
-<img src="public/Screenshots/MobileRaceCalendar.png">
-<img src="public/Screenshots/MobileDriverSt.png">
-<img src="public/Screenshots/MobileConstructorSt.png">
-<img src="public/Screenshots/MobileDrivers.png">
-<img src="public/Screenshots/MobileTeams.png">
+<img src="public/Screenshots/MobileRaceCalendar.png" width="400" heigth="600">
+<img src="public/Screenshots/MobileDriverSt.png" width="400" heigth="600">
+<img src="public/Screenshots/MobileConstructorSt.png" width="400" heigth="600">
+<img src="public/Screenshots/MobileDrivers.png" width="400" heigth="600">
+<img src="public/Screenshots/MobileTeams.png" width="400" heigth="600">
 
 ## Credits
 
