@@ -16,11 +16,11 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="links" id={showLinks ? "hidden" : ""}>
-        <Link to="https://f1-gamma.vercel.app/races">Race Schedule</Link>
-        <Link to="https://f1-gamma.vercel.app/driver-standings">Driver Standings</Link>
-        <Link to="https://f1-gamma.vercel.app/constructor-standings">Constructor Standings</Link>
-        <Link to="https://f1-gamma.vercel.app/teams">Teams</Link>
-        <Link to="https://f1-gamma.vercel.app/drivers">Drivers</Link>
+        <Link to="/races">Race Schedule</Link>
+        <Link to="/driver-standings">Driver Standings</Link>
+        <Link to="/constructor-standings">Constructor Standings</Link>
+        <Link to="/teams">Teams</Link>
+        <Link to="/drivers">Drivers</Link>
       </div>
       <Button
         className="hamburger-btn"
