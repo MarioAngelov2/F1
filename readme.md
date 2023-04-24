@@ -19,11 +19,11 @@ The constructor standings page displays the current rankings of all Formula 1 te
 The race schedule page displays a list of upcoming and past races for the current season. Users can view the name of each race, the date and time, and the location. The schedule is also updated in real-time to reflect any changes to the racing calendar.
 
 
-## Details
+## How it Works
 
 This project was built using `Vite` build tool and `React`, and it retrieves Formula 1 racing data from the `Ergast Developer API`.
 
-Ergast provides a free-to-use, RESTful API for retrieving a wide variety of motorsport data, including Formula 1 racing results, driver and constructor standings, and more. In this project, I utilized the Ergast API to retrieve real-time data for driver standings, constructor standings, and the race schedule.
+The app makes requests to a server to retrieve data on F1 races and drivers. The data is then rendered into components using custom hooks and state management tools like useState and useEffect. The app also uses the useQuery hook from TanStack to handle caching and state management.
 
 This project also utilizes several third-party libraries to enhance its functionality and user experience. These libraries include:
 
@@ -32,13 +32,17 @@ This project also utilizes several third-party libraries to enhance its function
 - React Router DOM
 - TanStack Query
 
-## Usage 
+`Framer Motion` is used to create beautiful animations to make the user experiance more pleasent.
+
+`Material-UI` is used to create 
+
+## Running the App
 
 You will be working in the `src` folder. This will be designated as the `root` folder, where `package.json` should be placed.
 
-You need to install all the packages in the root folder: `npm i`
-
-In order to run the project: `npm run dev`
+- Clone the repository to your local machine.
+- Navigate to the project directory and run `npm install` to install dependencies.
+- Run `npm run dev` to start the app.
 
 ## Screenshots 
 <img src="public/Screenshots/Home.png" />
