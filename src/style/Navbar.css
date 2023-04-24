@@ -124,6 +124,7 @@
   }
 
   .navbar-container .hamburger-btn {
+    display: flex;
     margin-right: 50px;
   }
 }
@@ -150,6 +151,7 @@
   }
 
   .navbar-container .hamburger-btn {
+    display: flex;
     margin-right: 50px;
   }
 }
@@ -176,6 +178,7 @@
   }
 
   .navbar-container .hamburger-btn {
+    display: flex;
     margin-right: 50px;
   }
 }
