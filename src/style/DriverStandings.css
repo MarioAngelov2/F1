@@ -2,7 +2,7 @@
   display: flex;
   width: min(1200px, 100% - 3rem);
   margin-inline: auto;
-  height: auto;
+  min-height: 100vh;
 }
 
 .driverStandings-container table {
