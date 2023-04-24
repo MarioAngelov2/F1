@@ -63,6 +63,10 @@
     height: auto;
   }
 
+  .constructorStandings-container table {
+    width: 100%;
+  }
+
   .constructorStandings-container .constructor-progress .constructor-title {
     width: 100%;
   }
@@ -81,7 +85,7 @@
     justify-items: center;
     margin: auto;
     gap: 1rem;
-    grid-template-columns: 10ch auto;
+    grid-template-columns: 13ch auto;
     padding: 0.5rem 1rem;
   }
 
