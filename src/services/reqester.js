@@ -1,5 +1,5 @@
 export function getCurrentSeason() {
-  return fetch(`http://ergast.com/api/f1/current.json`).then((res) => {
+  return fetch(`https://ergast.com/api/f1/current.json`).then((res) => {
     if (res.status === 200) {
       return res.json();
     } else {
@@ -9,7 +9,7 @@ export function getCurrentSeason() {
 }
 
 export function getDriversStandings() {
-  return fetch(`http://ergast.com/api/f1/2023/driverStandings.json`).then(
+  return fetch(`https://ergast.com/api/f1/2023/driverStandings.json`).then(
     (res) => {
       if (res.status === 200) {
         return res.json();
@@ -23,7 +23,7 @@ export function getDriversStandings() {
 }
 
 export function getConstructorStandings() {
-  return fetch(`http://ergast.com/api/f1/2023/constructorStandings.json`).then(
+  return fetch(`https://ergast.com/api/f1/2023/constructorStandings.json`).then(
     (res) => {
       if (res.status === 200) {
         return res.json();
