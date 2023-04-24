@@ -44,6 +44,15 @@ In order to run the project: `npm run dev`
 <img src="public/Screenshots/Home.png" />
 <img src="public/Screenshots/RaceCalendar.png" />
 <img src="public/Screenshots/DriverStandings.png" />
+<img src="public/Screenshots/ConstructorsStandings.png">
+<img src="public/Screenshots/Drivers.png">
+<img src="public/Screenshots/Teams.png">
+<img src="public/Screenshots/MobileHome.png">
+<img src="public/Screenshots/MobileRaceCalendar.png">
+<img src="public/Screenshots/MobileDriverSt.png">
+<img src="public/Screenshots/MobileConstructorSt.png">
+<img src="public/Screenshots/MobileDrivers.png">
+<img src="public/Screenshots/MobileTeams.png">
 
 ## Credits
 
