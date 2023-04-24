@@ -40,6 +40,8 @@ You need to install all the packages in the root folder: `npm i`
 
 In order to run the project: `npm run dev`
 
+## Screenshots 
+
 ## Credits
 
 - Formula One website for providing valuable information and resources.
