@@ -32,10 +32,6 @@ This project also utilizes several third-party libraries to enhance its function
 - React Router DOM
 - TanStack Query
 
-`Framer Motion` is used to create beautiful animations to make the user experiance more pleasent.
-
-`Material-UI` is used to create 
-
 ## Running the App
 
 You will be working in the `src` folder. This will be designated as the `root` folder, where `package.json` should be placed.
