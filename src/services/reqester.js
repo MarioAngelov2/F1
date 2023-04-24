@@ -1,5 +1,7 @@
+const baseUrl = "https://ergast.com/api/f1/";
+
 export function getCurrentSeason() {
-  return fetch(`https://ergast.com/api/f1/current.json`).then((res) => {
+  return fetch(`${baseUrl}current.json`).then((res) => {
     if (res.status === 200) {
       return res.json();
     } else {
