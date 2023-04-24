@@ -8,6 +8,10 @@ import { Button } from "@mui/material";
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
 
+  const closeMenu = () => {
+    setShowLinks(false);
+  };
+
   return (
     <div className="navbar-container">
       <div className="f1-logo">
@@ -16,17 +20,27 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="links" id={showLinks ? "hidden" : ""}>
-        <Link onClick={() => setShowLinks(showLinks)} to="/races">Race Schedule</Link>
-        <Link onClick={() => setShowLinks(showLinks)} to="/driver-standings">Driver Standings</Link>
-        <Link onClick={() => setShowLinks(showLinks)} to="/constructor-standings">Constructor Standings</Link>
-        <Link onClick={() => setShowLinks(showLinks)} to="/teams">Teams</Link>
-        <Link onClick={() => setShowLinks(showLinks)} to="/drivers">Drivers</Link>
+        <Link onClick={closeMenu} to="/races">
+          Race Schedule
+        </Link>
+        <Link onClick={closeMenu} to="/driver-standings">
+          Driver Standings
+        </Link>
+        <Link onClick={closeMenu} to="/constructor-standings">
+          Constructor Standings
+        </Link>
+        <Link onClick={closeMenu} to="/teams">
+          Teams
+        </Link>
+        <Link onClick={closeMenu} to="/drivers">
+          Drivers
+        </Link>
       </div>
       <Button
         className="hamburger-btn"
         onClick={() => setShowLinks(!showLinks)}
       >
-        <MenuIcon fontSize="large" className="hamburger-icon"/>
+        <MenuIcon fontSize="large" className="hamburger-icon" />
       </Button>
     </div>
   );
