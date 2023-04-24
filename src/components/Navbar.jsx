@@ -16,11 +16,11 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="links" id={showLinks ? "hidden" : ""}>
-        <Link to="/races">Race Schedule</Link>
-        <Link to="/driver-standings">Driver Standings</Link>
-        <Link to="/constructor-standings">Constructor Standings</Link>
-        <Link to="/teams">Teams</Link>
-        <Link to="/drivers">Drivers</Link>
+        <Link onClick={() => setShowLinks(showLinks)} to="/races">Race Schedule</Link>
+        <Link onClick={() => setShowLinks(showLinks)} to="/driver-standings">Driver Standings</Link>
+        <Link onClick={() => setShowLinks(showLinks)} to="/constructor-standings">Constructor Standings</Link>
+        <Link onClick={() => setShowLinks(showLinks)} to="/teams">Teams</Link>
+        <Link onClick={() => setShowLinks(showLinks)} to="/drivers">Drivers</Link>
       </div>
       <Button
         className="hamburger-btn"
