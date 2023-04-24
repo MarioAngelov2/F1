@@ -199,5 +199,11 @@
   .listing-container .listing-wrapper .listing-info .listing-drivers .driver {
     max-width: 100%;
   }
+
+  .teams-container .row .listing-wrapper:hover {
+    transform: scale(1.0);
+    transition: ease-in-out 0s;
+  }
+  
 }
 

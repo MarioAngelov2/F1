@@ -151,3 +151,9 @@
   margin-bottom: 10px;
 }
 
+@media screen and (max-width: 450px) {
+  .drivers-container .main-container .listing-container:hover {
+    transform: scale(1.0);
+    transition: ease-in-out 0s;
+  }
+}
