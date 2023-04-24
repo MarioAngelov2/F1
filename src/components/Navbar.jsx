@@ -6,7 +6,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { Button } from "@mui/material";
 
 const Navbar = () => {
-  const [showLinks, setShowLinks] = useState(true);
+  const [showLinks, setShowLinks] = useState(false);
 
   return (
     <div className="navbar-container">
