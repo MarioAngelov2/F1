@@ -59,7 +59,7 @@
   font-weight: 400;
 }
 
-@media (max-width: 650px) {
+@media screen and (max-width: 650px) {
   .driverStandings-container {
     justify-content: center;
   }
